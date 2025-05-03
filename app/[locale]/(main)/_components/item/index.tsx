@@ -91,9 +91,9 @@ const Item = ({
       id,
     });
     toast.promise(promise, {
-      loading: t("loading.archiveNote"),
-      success: t("success.archiveNote"),
-      error: t("error.archiveNote"),
+      loading: t("loading.deleteNote"),
+      success: t("success.deleteNote"),
+      error: t("error.deleteNote"),
     });
   };
 
@@ -159,7 +159,7 @@ const Item = ({
             >
               <DropdownMenuItem onClick={onArchieve}>
                 <Trash className="w-4 h-4 mr-2" />
-                {t("button.archive")}
+                {t("button.remove")}
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <div className="text-xs text-muted-foreground p-2">

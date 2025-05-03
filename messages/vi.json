@@ -14,7 +14,8 @@
     "createNote": "Tạo ghi chú thành công!",
     "archiveNote": "Lưu trữ ghi chú thành công!",
     "publishNote": "Xuất bản ghi chú thành công!",
-    "unPublishNote": "Gỡ xuất bản ghi chú thành công!"
+    "unPublishNote": "Gỡ xuất bản ghi chú thành công!",
+    "copyPublishedLink": "Sao chép đường dẫn thành công!"
   },
   "error": {
     "deleteNote": "Xóa ghi chú thất bại.",

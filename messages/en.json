@@ -14,7 +14,8 @@
     "createNote": "Note created!",
     "archiveNote": "Note archived!",
     "publishNote": "Note published!",
-    "unPublishNote": "Note unpublished!"
+    "unPublishNote": "Note unpublished!",
+    "copyPublishedLink": "Link copied!"
   },
   "error": {
     "deleteNote": "Failed to delete note.",

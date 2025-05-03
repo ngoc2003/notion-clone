@@ -14,7 +14,8 @@
     "createNote": "笔记已创建！",
     "archiveNote": "笔记已存档！",
     "publishNote": "笔记已发布！",
-    "unPublishNote": "笔记已取消发布！"
+    "unPublishNote": "笔记已取消发布！",
+    "copyPublishedLink": "复制链接成功!"
   },
   "error": {
     "deleteNote": "删除笔记失败。",

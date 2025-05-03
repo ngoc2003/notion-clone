@@ -13,7 +13,8 @@
     "createNote": "노트가 생성되었습니다!",
     "archiveNote": "노트가 아카이브되었습니다!",
     "publishNote": "노트가 게시되었습니다!",
-    "unPublishNote": "노트가 게시 취소되었습니다!"
+    "unPublishNote": "노트가 게시 취소되었습니다!",
+    "copyPublishedLink": "링크 복사 성공!"
   },
   "error": {
     "deleteNote": "노트 삭제 실패.",

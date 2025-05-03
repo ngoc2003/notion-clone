@@ -14,6 +14,7 @@ import {
 import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { useOrigin } from "@/hooks/useOrigin";
+import printJS from "print-js";
 
 interface PublishProps {
   initialData: Doc<"documents">;
@@ -59,9 +60,47 @@ export const Publish = ({ initialData }: PublishProps) => {
     });
   };
 
+  function generateHTMLFromJSON(data: any) {
+    let htmlContent = "";
+
+    JSON.parse(data).forEach((item: any) => {
+      if (item.type === "paragraph") {
+        let paragraphContent = item.content
+          .map((c: any) =>
+            c.type === "text"
+              ? `<span style="${generateStyles(c.styles)}">${c.text}</span>`
+              : ""
+          )
+          .join("");
+        htmlContent += `<p style="text-align:${item.props.textAlignment};">${paragraphContent}</p>`;
+      }
+    });
+
+    return htmlContent;
+  }
+
+  function generateStyles(styles: any) {
+    let stylesString = "";
+    for (let prop in styles) {
+      stylesString += `${prop}:${styles[prop]};`;
+    }
+    return stylesString;
+  }
+
   const onCopy = () => {
     navigator.clipboard.writeText(url);
     setCopied(true);
+
+    console.log(generateHTMLFromJSON(initialData.content));
+
+    toast.success(t("success.copyPublishedLink"));
+    // window.print();
+    printJS({
+      printable: generateHTMLFromJSON(initialData.content),
+      type: "json",
+      documentTitle: "hi",
+      // header: generateHTMLFromJSON(initialData.content),
+    });
 
     setTimeout(() => {
       setCopied(false);

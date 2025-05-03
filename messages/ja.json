@@ -14,7 +14,8 @@
     "createNote": "ノートが作成されました！",
     "archiveNote": "ノートがアーカイブされました！",
     "publishNote": "ノートが公開されました！",
-    "unPublishNote": "ノートが非公開になりました！"
+    "unPublishNote": "ノートが非公開になりました！",
+    "copyPublishedLink": "リンクが正常にコピーされました!"
   },
   "error": {
     "deleteNote": "ノートの削除に失敗しました。",
